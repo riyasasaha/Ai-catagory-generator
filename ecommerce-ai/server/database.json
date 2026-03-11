@@ -1,0 +1,40 @@
+{
+  "Products": [
+    {
+      "id": 1,
+      "name": "Classic Denim Jacket",
+      "description": "A vintage-wash blue denim jacket with silver button closures, perfect for fall weather. 100% cotton, unisex fit.",
+      "primary_category": "Apparel & Fashion",
+      "sub_category": "Denim Jackets",
+      "seo_tags": "[\"Classic Denim Jacket\",\"Vintage Wash Denim\",\"Blue Denim\",\"Unisex Fit Jacket\",\"100% Cotton Outerwear\",\"Fall Jacket\",\"Silver Button Closure\"]",
+      "sustainability_filters": "[\"Natural Fibers\",\"Eco-friendly\"]"
+    },
+    {
+      "id": 2,
+      "name": "Velvet Accent Chair",
+      "description": "A mid-century modern accent chair upholstered in emerald green velvet. Features gold-finished metal legs. Perfect for living rooms or home offices",
+      "primary_category": "Home & Furniture",
+      "sub_category": "Accent Chairs",
+      "seo_tags": "[\"Velvet Accent Chair\",\"Emerald Green Chair\",\"Mid-Century Modern Furniture\",\"Gold Leg Chair\",\"Living Room Furniture\",\"Home Office Chair\",\"Upholstered Chair\"]",
+      "sustainability_filters": "[]"
+    }
+  ],
+  "AI_Logs": [
+    {
+      "id": 1,
+      "timestamp": "2026-03-11T02:16:36.535Z",
+      "system_prompt": "You are a strict JSON API for an Applied AI Sustainable Commerce platform. \nYour primary goal is to categorize products, generate SEO tags, and identify sustainability filters based on the product name and description.\n\nINPUT FORMAT: You will receive the product name, description, and an array of allowed primary categories.\n\nOUTPUT FORMAT: You MUST return a purely valid JSON string with the following schema:\n{\n  \"primary_category\": \"string (must be chosen exactly from the allowed primary categories)\",\n  \"sub_category\": \"string\",\n  \"seo_tags\": [\"string\", \"string\", \"string\", \"string\", \"string\"], \n  \"sustainability_filters\": [\"string\", \"string\"]\n}\n\nRULES:\n- Do not wrap the JSON in markdown formatting (like ```json). Just the raw JSON.\n- The seo_tags array should contain 5-10 descriptive strings.\n- The sustainability_filters array should contain filters like \"Eco-friendly\", \"Cruelty-free\", \"Vegan\", \"Organic\", \"Recycled Materials\", etc. if applicable based on the product description. \n- The output MUST parse cleanly with JSON.parse().",
+      "user_input": "{\"name\":\"Classic Denim Jacket\",\"description\":\"A vintage-wash blue denim jacket with silver button closures, perfect for fall weather. 100% cotton, unisex fit.\",\"allowedCategories\":[\"Apparel & Fashion\"]}",
+      "raw_ai_response": "{\n  \"primary_category\": \"Apparel & Fashion\",\n  \"sub_category\": \"Denim Jackets\",\n  \"seo_tags\": [\n    \"Classic Denim Jacket\",\n    \"Vintage Wash Denim\",\n    \"Blue Denim\",\n    \"Unisex Fit Jacket\",\n    \"100% Cotton Outerwear\",\n    \"Fall Jacket\",\n    \"Silver Button Closure\"\n  ],\n  \"sustainability_filters\": [\n    \"Natural Fibers\",\n    \"Eco-friendly\"\n  ]\n}",
+      "status_code": 200
+    },
+    {
+      "id": 2,
+      "timestamp": "2026-03-11T02:17:50.180Z",
+      "system_prompt": "You are a strict JSON API for an Applied AI Sustainable Commerce platform. \nYour primary goal is to categorize products, generate SEO tags, and identify sustainability filters based on the product name and description.\n\nINPUT FORMAT: You will receive the product name, description, and an array of allowed primary categories.\n\nOUTPUT FORMAT: You MUST return a purely valid JSON string with the following schema:\n{\n  \"primary_category\": \"string (must be chosen exactly from the allowed primary categories)\",\n  \"sub_category\": \"string\",\n  \"seo_tags\": [\"string\", \"string\", \"string\", \"string\", \"string\"], \n  \"sustainability_filters\": [\"string\", \"string\"]\n}\n\nRULES:\n- Do not wrap the JSON in markdown formatting (like ```json). Just the raw JSON.\n- The seo_tags array should contain 5-10 descriptive strings.\n- The sustainability_filters array should contain filters like \"Eco-friendly\", \"Cruelty-free\", \"Vegan\", \"Organic\", \"Recycled Materials\", etc. if applicable based on the product description. \n- The output MUST parse cleanly with JSON.parse().",
+      "user_input": "{\"name\":\"Velvet Accent Chair\",\"description\":\"A mid-century modern accent chair upholstered in emerald green velvet. Features gold-finished metal legs. Perfect for living rooms or home offices\",\"allowedCategories\":[\"Home & Furniture\"]}",
+      "raw_ai_response": "{\n  \"primary_category\": \"Home & Furniture\",\n  \"sub_category\": \"Accent Chairs\",\n  \"seo_tags\": [\n    \"Velvet Accent Chair\",\n    \"Emerald Green Chair\",\n    \"Mid-Century Modern Furniture\",\n    \"Gold Leg Chair\",\n    \"Living Room Furniture\",\n    \"Home Office Chair\",\n    \"Upholstered Chair\"\n  ],\n  \"sustainability_filters\": []\n}",
+      "status_code": 200
+    }
+  ]
+}
